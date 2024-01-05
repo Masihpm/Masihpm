@@ -1,15 +1,15 @@
 class Node:
-    def init(self, coefficient=0, exponent=0):
-        self.coefficient = coefficient
-        self.exponent = exponent
+    def init(self, a=0, b=0):
+        self.a = a
+        self.b = b
         self.next = None
 
 class LinkedList:
     def init(self):
         self.head = None
 
-    def append(self, coefficient, exponent):
-        new_node = Node(coefficient, exponent)
+    def append(self, a, b):
+        new_node = Node(a, b)
         if not self.head:
             self.head = new_node
         else:
@@ -21,7 +21,7 @@ class LinkedList:
     def display(self):
         current = self.head
         while current:
-            print(f"{current.coefficient}x^{current.exponent}", end=" ")
+            print(f"{current.a}x^{current.b}", end=" ")
             current = current.next
             if current:
                 print("+", end=" ")
@@ -31,8 +31,8 @@ class Polynomial:
     def init(self):
         self.terms = LinkedList()
 
-    def add_term(self, coefficient, exponent):
-        self.terms.append(coefficient, exponent)
+    def add_term(self, a, b):
+        self.terms.append(a, b)
 
     def display(self):
         self.terms.display()
