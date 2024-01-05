@@ -4,7 +4,7 @@ class Node:
         self.b = b
         self.next = None
 
-class LinkedList:
+class peyvand_list:
     def init(self):
         self.head = None
 
@@ -29,7 +29,7 @@ class LinkedList:
 
 class Polynomial:
     def init(self):
-        self.terms = LinkedList()
+        self.terms = peyvand_list()
 
     def add_term(self, a, b):
         self.terms.append(a, b)
